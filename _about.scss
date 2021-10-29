@@ -1,0 +1,50 @@
+.about
+{
+    margin-top: 200px;
+    &-main
+    {
+        @include flex(row,start,space-between,none);
+        flex-wrap: wrap;
+    }    
+    &-conten
+    {
+        width: 30%;
+        margin-top: 100px;
+        @include flex(Column,start,start,70px);
+        flex-wrap: wrap;
+    }
+    &-img
+    {
+        width: 50%;
+        img 
+        {
+            @include img(100%,100%);
+        }
+    }
+    &-btn
+    {
+        width: 250px;
+        height: 60px;
+    }
+}
+@include maxw(768px)
+{
+    .about
+    {
+        &-main
+        {
+            display: grid;
+            grid-template-columns:1fr;
+            gap:30px;
+        }
+        &-conten
+        {
+            width: 100%;
+            @include flex(Column,center,center,70px);
+        }
+        &-img
+        {
+            margin: 0 auto;
+        }
+    }
+}

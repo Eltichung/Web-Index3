@@ -1,0 +1,53 @@
+.icon
+{
+    margin-top: 200px;
+    &-list
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap:30px;
+    }
+    &-item
+    {
+        height: 426px;
+        background-color:#562e77;
+        border-radius: 10px;
+        &-text
+        {
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-img
+        {
+            img 
+            {
+                display:block;
+                margin: 100px auto;
+            }
+        }
+    }
+    &-item:hover
+    {
+        background:linear-gradient(to right,#f14873,#9e1eb4);
+        cursor: pointer;
+        transition: 0.5s linear;
+        transform: scale(1.05);
+    }
+}
+@include maxw(768px)
+{
+    .icon
+    {
+        &-list
+        {
+            grid-template-columns: 1fr;
+        } 
+        &-item
+        {
+
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.work
+{
+    margin-top: 200px;
+    &-main
+    {
+        @include flex(row,start,space-between,none)
+    }    
+    &-conten
+    {
+        width: 30%;
+        @include flex(Column,start,start,70px);
+    }
+    &-img
+    {
+        width: 50%;
+        img 
+        {
+            @include img();
+        }
+    }
+    &-btn
+    {
+        width: 250px;
+        height: 60px;
+    }
+
+}
+@include maxw(768px)
+{
+    .work
+    {
+        &-main
+        {
+            display: grid;
+            grid-template-columns:1fr;
+            gap:30px;
+          
+        }
+        &-conten
+        {
+            width: 100%;
+            @include flex(Column,center,center,70px);
+        }
+        &-img
+        {
+            margin: 0 auto;
+        }
+    }
+}

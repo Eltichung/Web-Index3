@@ -1,0 +1,27 @@
+.contact
+{
+    margin-top: 200px;
+    margin-bottom: -300px;
+    position: relative;
+
+    &-main
+    {       
+        z-index: 2;
+        height: 600px;
+        background: url(./img/img15.png) no-repeat top ;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px rgba( #726f6f,0.6);
+        display: flex;
+    }
+    &-text
+    {
+        width: 45%;
+        margin: auto;
+        @include flex(column,center,space-between,100px);
+    }
+    &-btn
+    {
+        width: 250px;
+        height: 80px;
+    }
+}

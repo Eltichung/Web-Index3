@@ -1,0 +1,85 @@
+.header
+{
+    border-bottom: 1px solid rgb(177, 173, 173);
+   &-main
+   {
+       padding: 40px 0px;
+       @include flex(row,center,space-between,100px);
+   }
+  
+   &-menu
+   {
+       @include flex(row,center,100px);
+       li 
+       {
+           margin-left:50px;
+       }
+       a 
+       {
+           display: inline-block;
+           color: $white;
+           font-size: 20px;
+           position: relative;
+       }
+       a::after
+       {
+           content: "";
+           display: inline-block;
+           width: 0%;
+           height: 1px;
+           border-bottom: 2px solid $pink;
+           position: absolute;
+           bottom: 0%;
+           left: 0%;
+       }
+       a::after :hover
+       {
+           width: 100%;
+           transition: 0.5s linear;
+       }
+   }
+   &-tool
+   {
+     i 
+     {
+         margin: 0 20px;
+         font-size: 20px;
+         color: $white;
+     }
+   }
+   &-conten
+   {
+       margin: 350px 0px;
+       text-align: start;
+       p:first-child 
+       {
+           color:$white;
+           text-transform: uppercase;
+           font-size: 80px;
+           font-weight:bold;
+       }
+       p:last-child 
+       {
+           font-size: 40px;
+       }
+   }
+  
+}
+@include maxw(768px)
+{
+    .header
+    {
+        &-main
+        {
+            @include flex(row,center,flex-start,20px);
+        }
+        a 
+        {
+            font-size: 16px;
+        }
+        &-tool
+        {
+            display: none;
+        }
+    }
+}
